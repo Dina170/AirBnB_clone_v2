@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Configure Nginx server so that /redirect_me is redirecting to another page.
+# Sets up web servers for the deployment of web_static
 apt-get -y update
 apt-get -y install nginx
 
