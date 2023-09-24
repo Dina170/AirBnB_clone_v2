@@ -5,6 +5,7 @@ from models.city import City
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from os import getenv
+import models
 
 
 class State(BaseModel, Base):
@@ -27,5 +28,6 @@ class State(BaseModel, Base):
                 list.
 
              """
-            cities_objs = list(storage.all(City).values())
-            return list(filter(lambda obj: obj.state_id == self.id, cities_objs))
+            cities_objs = list(models.storage.all(City).values())
+            return list(filter(lambda obj: obj.state_id == self.id,
+                               cities_objs))
