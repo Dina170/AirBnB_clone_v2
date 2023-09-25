@@ -14,7 +14,7 @@ def cities_by_states():
     with the list of City objects linked to the State sort by name A->Z
     """
     states = storage.all(State)
-    return render_template("7-states_list.html", states=states)
+    return render_template("8-cities_by_states.html", states=states)
 
 
 @app.teardown_appcontext
