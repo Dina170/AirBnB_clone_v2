@@ -3,6 +3,7 @@
 
 from models import storage
 from flask import Flask, render_template
+from models.state import State
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ app = Flask(__name__)
 def states_list():
     """Display a HTML page that lists all states sort by name A->Z
     """
-    states = storage.all("State")
+    states = storage.all(State)
     return render_template("7-states_list.html", states=states)
 
 
